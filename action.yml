@@ -1,4 +1,4 @@
-name: Simple Upload S3
+name: Simple Upload S3 Compatible
 description: 'Simple Upload directory to S3 compartible provider'
 author: 'Diego Guedes'
 branding:
