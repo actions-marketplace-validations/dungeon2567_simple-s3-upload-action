@@ -11,9 +11,6 @@ inputs:
   AWS_ACCESS_KEY_ID:
     description: 'aws key id'
     required: true
-    AWS_ACCESS_KEY_ID:
-    description: 'aws key id'
-    required: true
   AWS_SECRET_ACCESS_KEY:
     description: 'aws secret access key'
     required: true
