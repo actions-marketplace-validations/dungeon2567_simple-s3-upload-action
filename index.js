@@ -5,6 +5,10 @@ const path = require('path');
 const klawSync = require('klaw-sync');
 const { lookup } = require('mime-types');
 
+const S3_ENDPOINT = core.getInput('S3_ENDPOINT', {
+  required: true
+});
+
 const AWS_KEY_ID = core.getInput('AWS_ACCESS_KEY_ID', {
   required: true
 });
@@ -21,7 +25,10 @@ const DEST_DIR = core.getInput('DEST_DIR', {
   required: true
 })
 
+const spacesEndpoint = new aws.Endpoint(S3_ENDPOINT);
+
 const s3 = new S3({
+  endpoint: spacesEndpoint,
   accessKeyId: AWS_KEY_ID,
   secretAccessKey: SECRET_ACCESS_KEY
 });
