@@ -1,11 +1,17 @@
 name: Simple Upload S3
-description: 'Simple Upload directory to S3'
-author: 'Youngchan Je'
+description: 'Simple Upload directory to S3 compartible provider'
+author: 'Diego Guedes'
 branding:
   icon: 'upload-cloud'
   color: 'orange'
 inputs:
+  AWS_S3_ENDPOINT:
+    description: 's3 endpoint'
+    required: true
   AWS_ACCESS_KEY_ID:
+    description: 'aws key id'
+    required: true
+    AWS_ACCESS_KEY_ID:
     description: 'aws key id'
     required: true
   AWS_SECRET_ACCESS_KEY:
@@ -24,5 +30,5 @@ outputs:
   object_locations:
     description: 'object locations'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
